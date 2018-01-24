@@ -1,0 +1,22 @@
+<div class="container">
+  <p class="h3 mt-5">Countries and their Capitals</p>
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Capital</th>
+        <th colspan="2">Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let country of countries">
+        <td>{{country._id}}</td>
+        <td>{{country.name}}</td>
+        <td>{{country.capital}}</td>
+        <td><button type="button" class="btn btn-info btn-sm" (click)="doUpdate(country)">Update</button></td>
+        <td><button type="button" class="btn btn-danger btn-sm" (click)="doDelete(country)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
